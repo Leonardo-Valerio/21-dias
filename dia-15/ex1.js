@@ -1,5 +1,5 @@
-let array1 = [13,20,10,22,24,20,27,17,19,14]
-let array2 = [24,22,23,11,15,17,29,14,16,21]
+let array1 = [13,20,10,22,24,20,27,17,19,14,24]
+let array2 = [24,22,23,11,15,17,29,14,16,21,1]
 
 
 function igualando(array1,array2){
@@ -9,9 +9,15 @@ function igualando(array1,array2){
         for(let j = 0;j < array2.length;j++){
             if (array1[i] == array2[j]){
                 let igual = array1[i]
-                array3[cont] = igual
-                cont++
+                array3.push(igual)
+                
                 j = array2.length
+                for(let k = 0;k < array3.length;k++){
+                    if (igual == array3[k]){
+                        array3[k].splice(1,1)
+                    }
+
+                }
                 
             }
         }
